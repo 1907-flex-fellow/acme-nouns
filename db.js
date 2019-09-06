@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 
-const conn = new Sequelize('postgres://localhost/acme-nouns')
+const conn = new Sequelize( process.env.DATABASE_URL || 'postgres://localhost/acme-nouns')
 
 const validId = {
     primaryKey: true,
